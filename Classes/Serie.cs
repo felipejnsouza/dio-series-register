@@ -28,6 +28,7 @@ namespace series_register
             stringReturn += "Título: " + this.Title + Environment.NewLine;
             stringReturn += "Descrição: " + this.Description + Environment.NewLine;
             stringReturn += "Ano de início: " + this.Year + Environment.NewLine;
+            stringReturn += "Excluído: " + this.Deleted;
             return stringReturn;
         }
 
@@ -39,6 +40,11 @@ namespace series_register
         public int GetId()
         {
             return this.Id;
+        }
+
+        public bool GetDeleted()
+        {
+            return this.Deleted;
         }
 
         public void Delete()

@@ -20,13 +20,13 @@ namespace series_register
                         InsertSerie();
                         break;
                     case "3":
-                        // UpdateSerie();
+                        UpdateSerie();
                         break;
                     case "4":
-                        // DeleteSerie();
+                        DeleteSerie();
                         break;
                     case "5":
-                        // ViewSerie();
+                        ViewSerie();
                         break;
                     case "L":
                         Console.Clear();
@@ -55,7 +55,17 @@ namespace series_register
             }
 
             foreach(var serie in seriesList){
-                Console.WriteLine("#ID {0}: - {1}", serie.GetId(), serie.GetTitle());
+                
+                var deletedSerie = serie.GetDeleted();
+
+                if(!deletedSerie)
+                {
+                     Console.WriteLine("#ID {0}: - {1}", serie.GetId(), serie.GetTitle());
+                } else {
+                     Console.WriteLine("#ID {0}: - {1} - série excluída", serie.GetId(), serie.GetTitle());
+                }
+                
+               
             }
         }
 
@@ -86,7 +96,55 @@ namespace series_register
             
             repository.Insert(newSerie);
         }
-        
+
+        private static void UpdateSerie()
+        {
+            Console.Write("Digite o id da série: ");
+            int serieIndex = int.Parse(Console.ReadLine());
+
+            foreach( int i in Enum.GetValues(typeof(Gender)))
+            {
+                Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Gender), i));
+            }
+
+            Console.Write("Digite o gênero entre as opções acima: ");
+            int genderCodeEntry = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o Título da série: ");
+            string serieTitleEntry = Console.ReadLine();
+
+            Console.WriteLine("Digite o Ano de início da série: ");
+            int serieYarEntry = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a Descrição da série: ");
+            string serieDescriptionEntry = Console.ReadLine();
+
+             Serie updateSerie = new Serie(id: serieIndex,
+                                        gender: (Gender)genderCodeEntry,
+                                        title: serieTitleEntry,
+                                        year: serieYarEntry,
+                                        description: serieDescriptionEntry);
+            
+            repository.Update(serieIndex ,updateSerie);
+        }
+
+        private static void DeleteSerie()
+        {
+            Console.Write("Digite o id da série: ");
+            int serieIndex = int.Parse(Console.ReadLine());
+
+            repository.Delete(serieIndex);
+        }
+
+        private static void ViewSerie(){
+            Console.Write("Digite o id da série: ");
+            int serieIndex = int.Parse(Console.ReadLine());
+
+            var serie = repository.GetById(serieIndex);
+
+            Console.WriteLine(serie);
+
+        }
 
          private static string GetUserOption()
             {
