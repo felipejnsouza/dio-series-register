@@ -1,0 +1,16 @@
+C:\Users\Felipe\Documents\DIO\series-register\bin\Debug\net5.0\series-register.exe
+C:\Users\Felipe\Documents\DIO\series-register\bin\Debug\net5.0\series-register.deps.json
+C:\Users\Felipe\Documents\DIO\series-register\bin\Debug\net5.0\series-register.runtimeconfig.json
+C:\Users\Felipe\Documents\DIO\series-register\bin\Debug\net5.0\series-register.runtimeconfig.dev.json
+C:\Users\Felipe\Documents\DIO\series-register\bin\Debug\net5.0\series-register.dll
+C:\Users\Felipe\Documents\DIO\series-register\bin\Debug\net5.0\ref\series-register.dll
+C:\Users\Felipe\Documents\DIO\series-register\bin\Debug\net5.0\series-register.pdb
+C:\Users\Felipe\Documents\DIO\series-register\obj\Debug\net5.0\series-register.csprojAssemblyReference.cache
+C:\Users\Felipe\Documents\DIO\series-register\obj\Debug\net5.0\series-register.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe\Documents\DIO\series-register\obj\Debug\net5.0\series-register.AssemblyInfoInputs.cache
+C:\Users\Felipe\Documents\DIO\series-register\obj\Debug\net5.0\series-register.AssemblyInfo.cs
+C:\Users\Felipe\Documents\DIO\series-register\obj\Debug\net5.0\series-register.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\Documents\DIO\series-register\obj\Debug\net5.0\series-register.dll
+C:\Users\Felipe\Documents\DIO\series-register\obj\Debug\net5.0\ref\series-register.dll
+C:\Users\Felipe\Documents\DIO\series-register\obj\Debug\net5.0\series-register.pdb
+C:\Users\Felipe\Documents\DIO\series-register\obj\Debug\net5.0\series-register.genruntimeconfig.cache
